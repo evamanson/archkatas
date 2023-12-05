@@ -11,12 +11,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Build
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - run: npm ci
+      - run: npm run build --if-present
+
       - name: Deploy
         if: success()
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete
-          path: public/
+          path: dist/
           remote_path: ${{ secrets.DEPLOY_PATH }}
           remote_host: ${{ secrets.DEPLOY_HOST }}
           remote_port: ${{ secrets.DEPLOY_PORT }}
