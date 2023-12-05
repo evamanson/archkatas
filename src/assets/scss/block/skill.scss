@@ -1,0 +1,72 @@
+.skill__wrapp {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	@media(max-width:578px) {
+		justify-content: flex-start;
+	}
+}
+
+.skill__box {
+	border-radius: 100px;
+	color: #000;
+	display: inline-block;
+	font-family: 'MontSemiBold';
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	background: #6B88FF;
+	padding: 8px 24px;
+	margin-bottom: 5px;
+
+	@media(max-width:578px) {
+		font-family: 'mont';
+		font-size: 21.549px;
+		font-weight: 400;
+		padding: 3px 17px;
+	}
+
+}
+
+.--6B88FF {
+	background: #6B88FF;
+}
+
+.--8D81E4 {
+	background: #8D81E4;
+}
+
+.--FF8B5B {
+	background: #FF8B5B;
+}
+
+.--79DA7E {
+	background: #79DA7E;
+}
+
+.--F4D3E7 {
+	background: #F4D3E7;
+}
+
+.skill__box-container {
+	.skill__box {
+		margin-bottom: 0;
+	}
+
+	border-radius: 100px;
+	margin-bottom: 5px;
+
+	@media(max-width:578px) {
+		background: none;
+	}
+}
+
+.--circle {
+	padding: 11px;
+
+	@media(max-width:578px) {
+		padding: 5px;
+	}
+}

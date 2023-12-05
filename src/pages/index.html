@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include("../html/head/head.html",{
+"title":'Главная страница'
+}
+)
+
+<body>
+	<div class="page">
+		@@include("../html/header/header.html" )
+		<main class="container-section">
+			@@include("../html/section/main.html" )
+			@@include("../html/section/about.html" )
+			@@include("../html/section/process.html" )
+			@@include("../html/section/organizers.html" )
+			<!-- убрать blog-title-desc если необходим одинаковый заголовок в дестопе и мобильном -->
+			<!-- убрать blog__section-title если необходим одинаковый заголовок в дестопе и мобильном -->
+
+			<!--@@include("../html/section/past.html" )
+			@@include("../html/section/blog.html" )-->
+			@@include("../html/footer/footer.html")
+		</main>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+	<script src="assets/js/app.min.js"></script>
+</body>
+
+</html>
