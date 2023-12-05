@@ -9,10 +9,10 @@ TRANSPORT = ssh
 all: deps build
 
 deps:
-	npm ci
+	yarn install --prefer-offline
 
 build:
-	npm build --if-present
+	yarn build --if-present
 
 release:
 	ansible-playbook deploy.yml -i environments/$(ENV) \
