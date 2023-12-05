@@ -2,11 +2,17 @@
 
 ENV = production
 TRANSPORT = ssh
-.PHONY = all release
+.PHONY = all deps build release
 
 ########################################################################################
 
-all: release
+all: deps build
+
+deps:
+	npm ci
+
+build:
+	npm build --if-present
 
 release:
 	ansible-playbook deploy.yml -i environments/$(ENV) \
